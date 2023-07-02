@@ -1,7 +1,7 @@
 # Mes challenges Frontend Mentor
 
-Ce repository est une collection de tous les défis que j'ai soumis à [frontendmentor.io](https://www.frontendmentor.io/home)
-Lien pour visiter la page d'accueil : 
+Ce repository est une collection de tous les défis que j'ai soumis à [frontendmentor.io](https://www.frontendmentor.io/home)<br>
+[Lien pour visiter la page d'accueil](https://brival-m.github.io/FontEnd_Mentor/)
 
 ### Défis débutant
 
