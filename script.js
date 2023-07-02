@@ -31,7 +31,7 @@ typeWriter();
 
 // Fonction pour écrire le texte de la section "About"
 
-const text1 = "sur cette page qui a pour but de répertorier tous les challenges Frontend Mentor que j'ai réalisés...";
+const text1 = "sur cette page qui répertorie tous les challenges que j'ai réalisés...";
 const text2 = "cette page sera mise à jour en fonction des challenges terminés. Bonne visite !";
 const delayTxt = 300; // Délai de 300 millisecondes entre les mots
 const el1 = document.getElementById('about__txt--typed');
