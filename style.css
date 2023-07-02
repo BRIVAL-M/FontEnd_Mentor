@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap'); */
+
+
+/* _____________________________ Global CSS __________________________________________*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0e0f10;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00c2cb;
+  background: linear-gradient(to bottom, #0e0f10, #0e0f10, #00c2cb, #0e0f10);
+}
+
+body {
+  background: #0e0f10;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: currentColor
+}
+
+li {
+  list-style: none;
+}
+
+/* _____________________________ Header __________________________________________*/
+.header {
+  background: #00c2cb;
+  will-change: transform;
+  animation: entranceTop 1s ease 150ms 1 normal backwards;
+}
+
+@keyframes entranceTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header__title__container {
+  display: flex;
+  align-items: center;
+}
+
+.header__img {
+  height: 32px;
+  margin: 20px;
+  animation: displaySwirl 1s ease 0s 1 normal forwards;
+  will-change: transform;
+}
+
+@keyframes displaySwirl {
+  0% {
+    opacity: 0;
+    transform: rotate(-540deg) scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+.header__title {
+  font-size: 2vh;
+  color: #0e0f10;
+  letter-spacing: 1.5px;
+  animation: displayLeft 500ms ease 0.3s 1 normal backwards;
+}
+
+.header__title::first-line {
+  color: whitesmoke;
+}
+
+@keyframes displayLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cursor {
+  margin-left: 2px;
+  animation: cursor-animation 1s infinite;
+}
+
+@keyframes cursor-animation {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* _____________________________ CSS shared between sections: about and challenge __________________________________________*/
+
+.about,
+.challenge {
+  min-height: 90vh;
+  margin-top: 3%;
+  padding: 3%;
+}
+
+.about__title,
+.challenge__title {
+  color: #9E9E9E;
+  font-size: 2vh;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 3%;
+}
+
+.about__title {
+  animation: entranceView 1s ease 350ms 1 normal backwards;
+}
+
+.challenge__title {
+  animation: entranceView 1s ease 150ms 1 normal backwards;
+}
+
+@keyframes entranceView {
+  from {
+    opacity: 0;
+  }
+
+  ;
+
+  to {
+    opacity: 1;
+  }
+
+  ;
+
+}
+
+/* _____________________________ SECTION About __________________________________________*/
+
+.about__txt {
+  color: whitesmoke;
+  font-size: calc(4vw + 12px);
+  font-weight: 900;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  animation: entranceBottom 1s ease 350ms 1 normal backwards;
+  will-change: transform;
+}
+
+@keyframes entranceBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*A revoir*/
+.fade-in {
+  color: #83e5e9;
+  animation: opacity 1s ease 0s 1 normal forwards;
+  -moz-animation: opacity 1s ease 0s 1 normal forwards;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  will-change: transform;
+  -moz-will-change: transform;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* _____________________________ SECTION Challenge __________________________________________*/
+
+.challenge__title span {
+  color: #83e5e9;
+  font-size: 2vh;
+}
+
+.challenge__card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  background-color: #1b1c1c;
+  border: solid 3px transparent;
+  padding: 1%;
+  margin-bottom: 5vh;
+  animation: entranceBottom 0.6s ease 0s 1 normal backwards;
+  /* animation: entranceBottom 0.6s ease 0s 1 normal backwards, activateHover 0s ease 0.9s forwards; */
+  transition: transform 500ms ease;
+  will-change: transform;
+}
+
+/* .challenge__list > li:nth-child(1) .challenge__card {
+  animation-delay: 0.2s;
+}
+
+.challenge__list > li:nth-child(2) .challenge__card {
+  animation-delay: 0.4s;
+}
+
+.challenge__list > li:nth-child(3) .challenge__card {
+  animation-delay: 0.6s;
+}
+
+.challenge__list > li:nth-child(4) .challenge__card {
+  animation-delay: 0.8s;
+} */
+/* @keyframes activateHover {
+  to {
+    pointer-events: auto;
+  }
+} */
+
+.challenge__card:hover {
+  border: solid 3px #00c2cb;
+  transform: scale(0.99);
+}
+
+.challenge__card figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 194px;
+}
+
+.challenge__subtitle {
+  color: #00c2cb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 5vw;
+  font-weight: 900;
+}
+
+.challenge__desc {
+  color: #9E9E9E;
+  font-size: 3vh;
+}
+
+/* _____________________________ Footer __________________________________________*/
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #00c2cb;
+  height: 15vh;
+}
+
+.footer__img {
+  height: 10vh;
+  animation: animationBtn 2s ease 0s infinite normal forwards;
+  will-change: transform;
+}
+
+@keyframes animationBtn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* _____________________________ Média queries __________________________________________*/
+
+@media screen and (max-width: 1452px) {
+
+  .challenge__card {
+    justify-content: center;
+    /* background: linear-gradient(to bottom, #00c2cb 49%, #0e0f10 40%); */
+    background: linear-gradient(to bottom, #00c2cb 49%, #1b1c1c 40%);
+    border-bottom: solid 3px #1b1c1c;
+  }
+
+  .challenge__card figcaption {
+    text-align: center;
+  }
+
+  .challenge__img {
+    box-shadow: 0 4px 8px 0 rgba(27, 28, 28, 0.2);
+  }
+
+}
+
+@media screen and (max-width: 999px) {
+
+  .about__txt {
+    font-size: 6vh;
+  }
+}
+
+@media screen and (max-width: 439px) {
+  .about__txt {
+    font-size: 5vh;
+    line-height: 60px;
+  }
+
+
+
+}
+
+@media screen and (max-width: 379px) {
+  .challenge__card {
+    background: linear-gradient(to bottom, #00c2cb 47%, #1b1c1c 40%);
+  }
+
+  .challenge__img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 333px) {
+
+  .about__txt {
+    font-size: 4vh;
+    line-height: 50px;
+  }
+
+  .challenge__subtitle {
+    font-size: 6vw;
+  }
+
+  .challenge__desc {
+    /*pas très utile lol*/
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+  <title>Mes Challenges Frontend Mentor</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__title__container">
+      <img class="header__img" src="img/favicon-32x32.png">
+      <h1 class="header__title">Mes Challenges<br><span id="typed-text"></span></h1>
+    </div>
+  </header>
+  <section class="about">
+    <h2 class="about__title">A propos</h2>
+    <p class="about__txt">Bonjour et bienvenue <span id="about__txt--typed"></span></p>
+  </section>
+  <section class="challenge hidden">
+    <h2 class="challenge__title">Challenges effectués : <span id="challenge--completed"></span></h2>
+    <ul id="challenge--counter" class="challenge__list">
+      <li class="challenge__link">
+        <a href="qr_code_component/index.html">
+          <figure class="challenge__card">
+            <img class="challenge__img" src="img/qr_code.jpg" alt="projet Frontend Mentor qr code component">
+            <figcaption>
+              <h3 class="challenge__subtitle">qr code component</h3>
+              <p class="challenge__desc">HTML CSS</p>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <footer class="footer">
+    <a class="footer__btn" href="#"><img class="footer__img" src="img/arrowBtn.png" alt=""></a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
