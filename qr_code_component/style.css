@@ -1,24 +1,99 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+/*Import Google font*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap');
+
+/*Reset CSS*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-a {
-    text-decoration:none;
-    cursor: pointer;
-    color:currentColor;
-    background:gainsboro;
-    padding: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: transform 500ms ease;
-    will-change: transform;
+li {
+  list-style: none;
+}
+
+/*Global CSS*/
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--light-gray);
+}
+
+/*QR code CSS*/
+
+.qrcode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+  padding-inline: 30px;
   }
-  a:hover {
-    background-color: #1d3d7d;
-    color: gainsboro;
-    transform: scale(0.99);
-  }
+
+.qrcode__card {
+  max-width: 330px;
+  padding: 15px;
+  text-align: center;
+  background: var(--white);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+
+.qrcode__img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.qrcode__descript {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px 0px 28px;
+  padding-inline: 10px;
+}
+
+.qrcode__title {
+  font-size: 23px;
+  color: var(--dark-blue);
+}
+
+.qrcode__text {
+  padding-inline: 3px;
+  color: var(--grayish-blue);
+}
+
+/*Attribution CSS*/
+
+.attribution {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin: 8px 0px 8px;
+  text-align: center;
+ }
+
+.attribution__links { 
+  color: #3e52a3;
+  text-decoration: none; 
+  transition: color 300ms ease;
+}
+
+.attribution__links:hover {
+  color: #00b4fb;
+}
+
+
+
+
+

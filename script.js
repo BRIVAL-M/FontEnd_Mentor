@@ -79,6 +79,7 @@ window.addEventListener('scroll', () => {
     challengeSection.classList.remove('hidden');
     isAboutVisible = false;
     updateChallengeCount()
+    
  
   } else if (scrollPosition === 0 && !isAboutVisible) {
     aboutSection.classList.remove('hidden');
@@ -116,6 +117,9 @@ const cards = document.querySelectorAll('.challenge__list > li .challenge__card'
 cards.forEach((card, index) => {
   card.style.animationDelay = `${index * 0.2}s`;
 });
+
+
+
 
 
 

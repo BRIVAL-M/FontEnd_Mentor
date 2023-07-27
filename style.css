@@ -26,7 +26,8 @@ html {
 ::-webkit-scrollbar-thumb {
   background-color: #00c2cb;
   background: linear-gradient(to bottom, #0e0f10, #0e0f10, #00c2cb, #0e0f10);
-}
+  }
+  
 
 body {
   background: #0e0f10;
@@ -336,8 +337,6 @@ li {
 
   .challenge__card {
     justify-content: center;
-    /* background: linear-gradient(to bottom, #00c2cb 49%, #0e0f10 40%); */
-    background: linear-gradient(to bottom, #00c2cb 49%, #1b1c1c 40%);
     border-bottom: solid 3px #1b1c1c;
   }
 
@@ -345,34 +344,32 @@ li {
     text-align: center;
   }
 
-  .challenge__img {
-    box-shadow: 0 4px 8px 0 rgba(27, 28, 28, 0.2);
+  .challenge__desc {
+    border-bottom: #00c2cb solid 3px;
+    padding-bottom: 1em;
   }
-
 }
 
 @media screen and (max-width: 999px) {
 
   .about__txt {
     font-size: 6vh;
+    margin-top: 10dvh;/*________________________A vérifier*/
   }
 }
 
 @media screen and (max-width: 439px) {
+
   .about__txt {
-    font-size: 5vh;
+    /* font-size: 5vh; */
+    font-size: 4.45vh;
     line-height: 60px;
+    
   }
-
-
-
 }
 
 @media screen and (max-width: 379px) {
-  .challenge__card {
-    background: linear-gradient(to bottom, #00c2cb 47%, #1b1c1c 40%);
-  }
-
+ 
   .challenge__img {
     width: 100%;
   }
