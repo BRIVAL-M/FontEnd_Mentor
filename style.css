@@ -181,7 +181,7 @@ li {
 
 .about__txt {
   color: whitesmoke;
-  font-size: calc(4vw + 12px);
+  font-size: calc(4vw + 10px);
   font-weight: 900;
   word-break: keep-all;
   overflow-wrap: anywhere;

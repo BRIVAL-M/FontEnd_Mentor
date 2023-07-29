@@ -33,7 +33,6 @@ body {
 
 .qrcode {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 95vh;
@@ -68,7 +67,6 @@ body {
 }
 
 .qrcode__text {
-  padding-inline: 3px;
   color: var(--grayish-blue);
 }
 
@@ -81,6 +79,7 @@ body {
   gap: 5px;
   margin: 8px 0px 8px;
   text-align: center;
+  color: var(--dark-blue);
  }
 
 .attribution__links { 
