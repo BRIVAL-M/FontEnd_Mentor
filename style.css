@@ -36,7 +36,8 @@ body {
 h1,
 h2,
 h3,
-p {
+p,
+label {
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 1px;
 }
@@ -53,6 +54,10 @@ li {
 
 /* _____________________________ Header __________________________________________*/
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90px;
   background: #00c2cb;
   will-change: transform;
   animation: entranceTop 1s ease 150ms 1 normal backwards;
@@ -80,6 +85,30 @@ li {
   margin: 20px;
   animation: displaySwirl 1s ease 0s 1 normal forwards;
   will-change: transform;
+}
+
+.header label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row-reverse;
+  text-align: center;
+  font-size: small;
+  font-size: x-small;
+  padding-right: 10px;
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  color: #00c2cb;
+}
+
+ input[type="checkbox"]:checked {
+  
+  background: #0e0f10!important;
+  
 }
 
 @keyframes displaySwirl {
@@ -185,7 +214,7 @@ li {
   font-weight: 900;
   word-break: keep-all;
   overflow-wrap: anywhere;
-  animation: entranceBottom 1s ease 350ms 1 normal backwards;
+  animation: entranceBottom 1s ease 100ms 1 normal backwards;
   will-change: transform;
 }
 
@@ -233,15 +262,23 @@ li {
   font-size: 2vh;
 }
 
+.challenge__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5vw;
+}
+
 .challenge__card {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 30px;
+  max-width: 349px;
   background-color: #1b1c1c;
   border: solid 3px transparent;
-  padding: 1%;
-  margin-bottom: 5vh;
+  padding: 3%;
   animation: entranceBottom 0.6s ease 0s 1 normal backwards;
   /* animation: entranceBottom 0.6s ease 0s 1 normal backwards, activateHover 0s ease 0.9s forwards; */
   transition: transform 500ms ease;
@@ -271,6 +308,7 @@ li {
 
 .challenge__card:hover {
   border: solid 3px #00c2cb;
+  background: #0e0f10;
   transform: scale(0.99);
 }
 
@@ -278,20 +316,28 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 194px;
+  align-items: center;
+  height: 200px;
+}
+
+.challenge__img {
+  width: 100%;
 }
 
 .challenge__subtitle {
   color: #00c2cb;
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 1px;
-  font-size: 5vw;
+  font-size: 3vh;
   font-weight: 900;
 }
 
 .challenge__desc {
   color: #9E9E9E;
   font-size: 3vh;
+  padding-bottom: 20px;
+  border-bottom: #00c2cb solid 3px;
 }
 
 /* _____________________________ Footer __________________________________________*/
@@ -335,7 +381,7 @@ li {
 
 @media screen and (max-width: 1452px) {
 
-  .challenge__card {
+  /* .challenge__card {
     justify-content: center;
     border-bottom: solid 3px #1b1c1c;
   }
@@ -347,7 +393,7 @@ li {
   .challenge__desc {
     border-bottom: #00c2cb solid 3px;
     padding-bottom: 1em;
-  }
+  } */
 }
 
 @media screen and (max-width: 999px) {
@@ -370,9 +416,9 @@ li {
 
 @media screen and (max-width: 379px) {
  
-  .challenge__img {
+  /* .challenge__img {
     width: 100%;
-  }
+  } */
 }
 
 @media screen and (max-width: 333px) {
@@ -382,14 +428,14 @@ li {
     line-height: 50px;
   }
 
-  .challenge__subtitle {
+  /* .challenge__subtitle {
     font-size: 6vw;
   }
 
   .challenge__desc {
-    /*pas très utile lol*/
+   
     word-break: keep-all;
     overflow-wrap: anywhere;
-  }
+  } */
 
 }

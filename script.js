@@ -118,6 +118,62 @@ cards.forEach((card, index) => {
   card.style.animationDelay = `${index * 0.2}s`;
 });
 
+// Fonction pour les FX sonores de la page src des sons "Alexander Nelipa": https://www.youtube.com/watch?v=KMO1Bfwd3SU
+// A revoir...
+
+const cardHover = document.querySelectorAll('.challenge__card');
+const audio = new Audio('sound/hoverFxSound.mp3');
+const scrollDownAudio = new Audio('sound/scrollDown.mp3');
+const checkbox = document.querySelector('#sound-effects');
+const label = checkbox.parentElement;
+const labelText = label.querySelector('span');
+
+checkbox.addEventListener('change', function() {
+  if (checkbox.checked) {
+    const msg = new SpeechSynthesisUtterance('effets sonore activer');
+    window.speechSynthesis.speak(msg);
+    labelText.textContent = "Désactiver les effets sonores";
+  } else {
+    const msg = new SpeechSynthesisUtterance('effets sonores désactivés');
+    window.speechSynthesis.speak(msg);
+    labelText.textContent = "Activer les effets sonores";
+  }
+});
+
+let lastScrollTop = 0;
+window.addEventListener('scroll', function() {
+  if (checkbox.checked) {
+    let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScrollTop > lastScrollTop) {
+      scrollDownAudio.play();
+    }
+    lastScrollTop = currentScrollTop;
+  }
+});
+
+cardHover.forEach(function(card) {
+  card.addEventListener('mouseenter', function() {
+    if (checkbox.checked) {
+      audio.play();
+    }
+  });
+  card.addEventListener('mouseleave', function() {
+    audio.pause();
+    audio.currentTime = 0;
+  });
+});
+
+const upBtn = document.querySelector('.footer__btn');
+const upBtnAudio = new Audio('sound/upBtnFx.mp3');
+
+upBtn.addEventListener('click', function() {
+  if (checkbox.checked) {
+    upBtnAudio.play();
+  }
+  });
+
+
+
 
 
 
